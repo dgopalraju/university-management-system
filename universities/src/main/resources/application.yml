@@ -12,7 +12,8 @@ spring:
       hibernate:
         format:
           sql: true
-
+  application:
+    name: University
 server:
   port: 9088
   
