@@ -14,7 +14,7 @@ import lombok.EqualsAndHashCode;
 @Table
 @EqualsAndHashCode(callSuper = true)
 public class Universities extends BaseEntity {
-	
+
 	@Id
 	private Long universityId;
 	private String universityName;
@@ -25,10 +25,10 @@ public class Universities extends BaseEntity {
 	private String email;
 	private String founderName;
 	private String website;
-	
+
 	@PrePersist
 	public void generateId() {
-		if(universityId == null) {
+		if (universityId == null) {
 			this.universityId = 1000000000L + (long) (Math.random() * 9000000000L);
 		}
 	}

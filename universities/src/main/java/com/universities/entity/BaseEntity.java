@@ -17,19 +17,19 @@ import lombok.Data;
 @MappedSuperclass
 @EntityListeners(value = { AuditingEntityListener.class })
 public abstract class BaseEntity {
-	
+
 	@CreatedBy
 	@Column(updatable = false)
 	private String createdBy;
-	
+
 	@CreatedDate
 	@Column(updatable = false)
 	private LocalDate createdDate;
-	
+
 	@LastModifiedDate
 	@Column(insertable = false)
 	private LocalDate modifiedDate;
-	
+
 	@LastModifiedBy
 	@Column(insertable = false)
 	private String modifiedBy;

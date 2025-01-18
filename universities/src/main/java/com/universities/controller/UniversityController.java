@@ -59,7 +59,7 @@ public class UniversityController {
 		validateUniversityId(universityId);
 		return ResponseEntity.ok(universityService.deleteUniversity(universityId));
 	}
-	
+
 	private void validateUniversityId(Long universityId) {
 		if (null == universityId || universityId <= 0) {
 			throw new ValidationException("universityId can't be null must be a valid positive number");

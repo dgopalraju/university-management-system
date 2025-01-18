@@ -15,10 +15,10 @@ public class AuditorAwareImpl implements AuditorAware<String> {
 		return Optional.of("SYSTEM");
 	}
 
-    @Bean
-    @Primary
-    AuditorAware<String> auditorProvider() {
-        return new AuditorAwareImpl();
-    }
+	@Bean
+	@Primary
+	AuditorAware<String> auditorProvider() {
+		return new AuditorAwareImpl();
+	}
 
 }

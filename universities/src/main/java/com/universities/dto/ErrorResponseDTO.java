@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ErrorResponseDTO {
-	
+
 	private LocalDateTime timestamp;
 	private String message;
 	Map<String, String> details;
