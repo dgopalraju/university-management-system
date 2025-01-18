@@ -2,9 +2,15 @@ package com.universities.dto;
 
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.universities.entity.BaseEntity;
+
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 @Data
+@EqualsAndHashCode(callSuper=false)
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class UniversityResponseDTO {
 
 	private Long universityId;
@@ -16,5 +22,9 @@ public class UniversityResponseDTO {
 	private String email;
 	private String founderName;
 	private String website;
+	private String createdBy;
+	private LocalDate createdDate;
+	private LocalDate modifiedDate;
+	private String modifiedBy;
 
 }
